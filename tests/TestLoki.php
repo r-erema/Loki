@@ -1,7 +1,7 @@
 <?php
 
-    use org\bovigo\vfs\vfsStream;
-    use PHPUnit\Framework\TestCase;
+use org\bovigo\vfs\vfsStream,
+    PHPUnit\Framework\TestCase;
 
 class TestLoki extends TestCase
 {
