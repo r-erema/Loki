@@ -10,10 +10,11 @@ class TestLoki extends TestCase
     {
         $file = vfsStream::newFile('file_to_lock');
         vfsStream::setup()->addChild($file);
+        $fileName = $file->url();
 
-        $loki = new Loki($file->url());
-        $thorBrother = new Loki($file->url());
-        $dcSucks = new Loki($file->url());
+        $loki = new Loki($fileName);
+        $thorBrother = new Loki($fileName);
+        $dcSucks = new Loki($fileName);
 
         $this->assertTrue($loki->readerLock());
         $this->assertTrue($dcSucks->readerLock());
@@ -22,7 +23,6 @@ class TestLoki extends TestCase
         $loki->unlock();
         $dcSucks->unlock();
         $this->assertTrue($thorBrother->writerLock());
-
     }
 
 }
