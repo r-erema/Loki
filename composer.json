@@ -14,5 +14,8 @@
         "psr-4": {
             "" : "src/"
         }
+    },
+    "require": {
+        "mikey179/vfsStream": "^1.6"
     }
 }

@@ -4,53 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c04087ee6e0d0d6236187e1629fa79c",
+    "content-hash": "718946f337fa6e531a0d759e28f33553",
     "packages": [
         {
-            "name": "yriveiro/php-fslock",
-            "version": "2.0.0",
+            "name": "mikey179/vfsStream",
+            "version": "v1.6.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yriveiro/php-fslock.git",
-                "reference": "59765a66f53cf1bcab4975647abe4caa41343ec8"
+                "url": "https://github.com/mikey179/vfsStream.git",
+                "reference": "d5fec95f541d4d71c4823bb5e30cf9b9e5b96145"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yriveiro/php-fslock/zipball/59765a66f53cf1bcab4975647abe4caa41343ec8",
-                "reference": "59765a66f53cf1bcab4975647abe4caa41343ec8",
+                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/d5fec95f541d4d71c4823bb5e30cf9b9e5b96145",
+                "reference": "d5fec95f541d4d71c4823bb5e30cf9b9e5b96145",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8",
-                "satooshi/php-coveralls": "^0.6.1"
+                "phpunit/phpunit": "~4.5"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6.x-dev"
+                }
+            },
             "autoload": {
-                "psr-4": {
-                    "FSLock\\": "src/"
+                "psr-0": {
+                    "org\\bovigo\\vfs\\": "src/main/php"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "Yago Riveiro",
-                    "email": "yago.riveiro@gmail.com"
+                    "name": "Frank Kleine",
+                    "homepage": "http://frankkleine.de/",
+                    "role": "Developer"
                 }
             ],
-            "description": "A simple lock implementation using flock.",
-            "keywords": [
-                "flock",
-                "lock",
-                "lock file",
-                "php"
-            ],
-            "time": "2016-01-31T23:48:35+00:00"
+            "description": "Virtual file system to mock the real file system in unit tests.",
+            "homepage": "http://vfs.bovigo.org/",
+            "time": "2017-08-01T08:02:14+00:00"
         }
     ],
     "packages-dev": [
@@ -107,52 +107,6 @@
                 "instantiate"
             ],
             "time": "2017-07-22T11:58:36+00:00"
-        },
-        {
-            "name": "mikey179/vfsStream",
-            "version": "v1.6.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mikey179/vfsStream.git",
-                "reference": "d5fec95f541d4d71c4823bb5e30cf9b9e5b96145"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/d5fec95f541d4d71c4823bb5e30cf9b9e5b96145",
-                "reference": "d5fec95f541d4d71c4823bb5e30cf9b9e5b96145",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.6.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "org\\bovigo\\vfs\\": "src/main/php"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Frank Kleine",
-                    "homepage": "http://frankkleine.de/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Virtual file system to mock the real file system in unit tests.",
-            "homepage": "http://vfs.bovigo.org/",
-            "time": "2017-08-01T08:02:14+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1507,6 +1461,52 @@
                 "validate"
             ],
             "time": "2018-01-29T19:49:41+00:00"
+        },
+        {
+            "name": "yriveiro/php-fslock",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yriveiro/php-fslock.git",
+                "reference": "59765a66f53cf1bcab4975647abe4caa41343ec8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yriveiro/php-fslock/zipball/59765a66f53cf1bcab4975647abe4caa41343ec8",
+                "reference": "59765a66f53cf1bcab4975647abe4caa41343ec8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FSLock\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yago Riveiro",
+                    "email": "yago.riveiro@gmail.com"
+                }
+            ],
+            "description": "A simple lock implementation using flock.",
+            "keywords": [
+                "flock",
+                "lock",
+                "lock file",
+                "php"
+            ],
+            "time": "2016-01-31T23:48:35+00:00"
         }
     ],
     "aliases": [],
